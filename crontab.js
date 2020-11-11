@@ -118,6 +118,8 @@ make_command = function(tab) {
 	let log_file = path.join(exports.log_folder, tab._id + ".log");
 	let log_file_stdout = path.join(exports.log_folder, tab._id + ".stdout.log");
 
+	return tab.command;
+	
 	var crontab_job_string_command = tab.command
 
 	if(crontab_job_string_command[crontab_job_string_command.length-1] != ";") { // add semicolon
